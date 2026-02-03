@@ -56,6 +56,13 @@ header {
   border-radius: 16px;
 }
 
+.section-inner a:link,
+.section-inner a:visited {
+    color: #FFFFFF;
+    text-decoration: underline;
+
+}
+
 .site-title {
     display: block;
     text-align: center;
@@ -128,5 +135,38 @@ nav a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+}
 
+.about {
+  min-height: 100vh;
+  background-image: url("images/forest.png"); /* your first image */
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 22px;
+  padding: 40px 300px;
+  position: relative;
+  border-radius: 16px;
+}
+.about-section a:link,
+.about-section a:visited {
+    color: #FFFFFF;
+    text-decoration: underline;
+
+}
+
+.frail-info {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 22px;
+  padding: 40px 300px;
+  position: relative;
+  border-radius: 16px;
 }
