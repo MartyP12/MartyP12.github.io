@@ -1,0 +1,248 @@
+:root{
+  --container: 900px;
+  --glass: rgba(0,0,0,0.55);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #000000;
+  margin: 0;
+  font-family: fantasy;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+p{ margin-top: 0; }
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header{
+  padding: 10px 12px;
+}
+
+/* === Sections / background images === */
+.hero{
+  min-height: 100vh;
+  background-image: url("images/smiling.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero > *{
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content{
+  padding: 20px;
+}
+
+.section-two{
+  min-height: 100vh;
+  background-image: url("images/frail.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 80px 20px;
+  position: relative;
+}
+
+.contact{
+  min-height: 100vh;
+  background-image: url("images/press-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.about{
+  min-height: 100vh;
+  background-image: url("images/forest.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Top nav (desktop: 3 columns, mobile: stacked) === */
+.top-nav{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.site-title{
+  color: inherit;
+  display: block;
+  text-align: center;
+  font-size: clamp(28px, 6vw, 42px);
+  padding: 8px 0;
+  margin: 0;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.nav-left,
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-left{
+  justify-self: start;
+}
+
+.nav-right{
+  justify-self: end;
+}
+
+.nav-left a{
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+nav a:hover{
+  color: #adadad;
+}
+
+.icon-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;            /* bigger tap target on mobile */
+  border-radius: 10px;
+}
+
+/* Make the nav-right icon images white by default, then grey on hover */
+.nav-right .icon-link img{
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.nav-right .icon-link:hover img,
+.nav-right .icon-link:focus-visible img{
+  filter: brightness(0) invert(0.7);
+  transform: translateY(-1px);
+}
+
+/* === Content cards === */
+.section-inner,
+.about-section,
+.frail-info{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 16px;
+
+  background: var(--glass);
+  backdrop-filter: blur(4px);
+
+  overflow-wrap: anywhere;
+}
+
+.section-inner{
+  margin: 40px auto;
+}
+
+.section-inner a:link,
+.section-inner a:visited,
+.about-section a:link,
+.about-section a:visited{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.about-section{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(16px, 2.2vw, 22px);
+  line-height: 1.65;
+  margin: 40px auto;
+}
+
+.frail-info{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: clamp(16px, 2.2vw, 22px);
+  line-height: 1.65;
+}
+
+/* === Mobile tweaks === */
+@media (max-width: 720px){
+  .top-nav{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .nav-left,
+  .nav-right{
+    justify-self: center;
+    justify-content: center;
+  }
+
+  .section-two{
+    padding: 60px 14px;
+  }
+
+  .about-section{
+    margin: 24px auto;
+    padding: 18px;
+  }
+
+  .frail-info,
+  .section-inner{
+    padding: 18px;
+  }
+
+  .nav-right .icon-link img{
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 420px){
+  header{
+    padding: 8px 10px;
+  }
+
+  .nav-left a{
+    padding: 7px 10px;
+  }
+
+  .icon-link{
+    padding: 7px;
+  }
+}
