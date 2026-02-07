@@ -91,10 +91,13 @@ header {
     margin: 0;
 }
 
-.site-title a {
+.site-title a,
+.site-title a:link,
+.site-title a:visited {
     color: inherit;
     text-decoration: none;
 }
+
 .site-title a:hover {
     color: #ffffff;
 }
