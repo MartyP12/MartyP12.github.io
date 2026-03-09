@@ -63,6 +63,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: #f2f2f2;
 
   padding: 80px 20px;
   position: relative;
@@ -221,6 +222,7 @@ h2.frail-title {
   text-align: center;
   font-size: clamp(24px, 3vw, 32px);
   margin-bottom: 16px;
+  color: #ffffff;
 }
 
 .shows {
@@ -229,12 +231,13 @@ h2.frail-title {
 
 .section-two a:link,
 .section-two a:visited {
-    color: #f0f0f0;
+    color: #fbfbfb;
     text-decoration: underline;
+    
 }
 
 .section-two a:hover {
-  color: #222222;
+  color: #1d1d1d;
 }
 
 /* === Mobile tweaks === */
