@@ -242,6 +242,10 @@ h2.frail-title {
   width: fit-content;
 }
 
+.album-cover a {
+  display: block;
+}
+
 .album-cover img {
   filter: brightness(50%);
   transition: filter 160ms ease;
@@ -268,15 +272,53 @@ h2.frail-title {
 
 /* === Mobile tweaks === */
 @media (max-width: 720px){
+  .hero{
+    min-height: auto;
+    background-size: cover;
+    background-position: center top;
+  }
+
   .top-nav{
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 10px;
   }
 
   .nav-left,
   .nav-right{
+    display: flex;
+    flex-wrap: wrap;
     justify-self: center;
     justify-content: center;
+  }
+
+  .nav-left{
+    gap: 2px;
+  }
+
+  .nav-right{
+    gap: 4px;
+  }
+
+  .nav-right a{
+    margin-left: 0;
+    padding: 6px 8px;
+  }
+
+  .album-cover{
+    width: min(100%, 320px);
+    margin: 24px auto 0;
+    padding: 0 12px 24px;
+  }
+
+  .album-cover a{
+    width: 70%;
+  }
+
+  .album-cover img{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .section-two{
@@ -304,11 +346,25 @@ h2.frail-title {
     padding: 8px 10px;
   }
 
+  .site-title{
+    padding: 10px 0;
+  }
+
   .nav-left a{
     padding: 7px 10px;
   }
 
   .icon-link{
     padding: 7px;
+  }
+
+  .album-cover{
+    margin-top: 18px;
+    padding: 0 8px 18px;
+  }
+
+  .album-title{
+    margin-bottom: 12px;
+    font-size: clamp(18px, 6vw, 22px);
   }
 }
