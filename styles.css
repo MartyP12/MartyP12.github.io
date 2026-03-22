@@ -38,6 +38,7 @@ header {
 
 .hero {
   min-height: 100vh;
+  min-height: 100svh;
   background-image: url("images/smiling.jpg"); /* your first image */
   background-repeat: no-repeat;
   background-size: 120% auto;
@@ -271,9 +272,10 @@ h2.frail-title {
 }
 
 /* === Mobile tweaks === */
-@media (max-width: 720px){
+@media (max-width: 1265px){
   .hero{
-    min-height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
     background-size: cover;
     background-position: center top;
   }
@@ -281,7 +283,12 @@ h2.frail-title {
   .top-nav{
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 10px;
+    gap: 4px;
+    padding: 0;
+  }
+
+  .site-title{
+    padding: 8px 20px 4px;
   }
 
   .nav-left,
@@ -292,12 +299,18 @@ h2.frail-title {
     justify-content: center;
   }
 
+  .icon-link img{
+    width: 15px;
+    height: 15px;
+  }
+
   .nav-left{
     gap: 2px;
   }
 
   .nav-right{
     gap: 4px;
+    margin-top: -2px;
   }
 
   .nav-right a{
@@ -307,8 +320,12 @@ h2.frail-title {
 
   .album-cover{
     width: min(100%, 320px);
-    margin: 24px auto 0;
+    margin: 270px auto 0;
     padding: 0 12px 24px;
+  }
+
+  .album-title{
+    font-size: clamp(12px, 6vw, 12px);
   }
 
   .album-cover a{
@@ -338,33 +355,5 @@ h2.frail-title {
   .nav-right .icon-link img{
     width: 28px;
     height: 28px;
-  }
-}
-
-@media (max-width: 420px){
-  header{
-    padding: 8px 10px;
-  }
-
-  .site-title{
-    padding: 10px 0;
-  }
-
-  .nav-left a{
-    padding: 7px 10px;
-  }
-
-  .icon-link{
-    padding: 7px;
-  }
-
-  .album-cover{
-    margin-top: 18px;
-    padding: 0 8px 18px;
-  }
-
-  .album-title{
-    margin-bottom: 12px;
-    font-size: clamp(18px, 6vw, 22px);
   }
 }
