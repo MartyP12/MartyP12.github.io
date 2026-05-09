@@ -234,7 +234,14 @@ h2.frail-title {
   color: #dcdcdc;
 }
 
-.album-cover {
+.release-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.album-cover,
+.finish-line {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,21 +250,32 @@ h2.frail-title {
   width: fit-content;
 }
 
-.album-cover a {
+.finish-line {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.album-cover a,
+.finish-line a {
   display: block;
 }
 
-.album-cover img {
+.album-cover img, .finish-line img {
   filter: brightness(50%);
   transition: filter 160ms ease;
 }
 
-.album-cover img:hover {
+.album-cover img:hover, .finish-line img:hover {
   filter: brightness(100%);
 }
 
 .shows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 2;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .section-two a:link,
@@ -318,21 +336,32 @@ h2.frail-title {
     padding: 6px 8px;
   }
 
-  .album-cover{
+  .release-row{
+    display: block;
+  }
+
+  .album-cover,
+  .finish-line{
     width: min(100%, 320px);
-    margin: 270px auto 0;
+    margin: 20px auto 0;
     padding: 0 12px 24px;
+  }
+
+  .album-cover{
+    margin-top: 270px;
   }
 
   .album-title{
     font-size: clamp(12px, 6vw, 12px);
   }
 
-  .album-cover a{
+  .album-cover a,
+  .finish-line a{
     width: 70%;
   }
 
-  .album-cover img{
+  .album-cover img,
+  .finish-line img{
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
