@@ -249,6 +249,13 @@ nav a:hover {
   border-radius: 16px;
 }
 
+.upcoming-shows {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
 h2.frail-title {
   font-family: Serif, 'Times New Roman', Times, Georgia, serif;
   text-align: center;
@@ -303,6 +310,7 @@ h2.frail-title {
 .shows {
   display: flex;
   justify-content: center;
+  font-size: clamp(16px, 2.2vw, 27px);
   align-items: center;
   line-height: 2;
   margin: 0 auto;
@@ -389,6 +397,15 @@ h2.frail-title {
     width: min(100%, 320px);
     margin: 20px auto 0;
     padding: 0 12px 24px;
+  }
+
+  .upcoming-shows img {
+    width: min(70vw, 260px);
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
   }
 
   .album-cover{
