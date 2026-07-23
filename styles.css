@@ -250,18 +250,19 @@ nav a:hover {
 }
 
 h2.frail-title {
-  font-family: Optima, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Serif, 'Times New Roman', Times, Georgia, serif;
   text-align: center;
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(18px, 3vw, 32px);
   margin-bottom: 16px;
   color: #ffffff;
 }
+
 .album-title {
   font-family: Serif, 'Times New Roman', Times, Georgia, serif;
   text-align: center;
   margin-bottom: 16px;
-  font-size: clamp(20px, 3vw, 24px);
-  color: #2a2a2a;
+  font-size: clamp(20px, 3vw, 18px);
+  color: #ffffff;
 }
 
 .release-row {
@@ -276,13 +277,13 @@ h2.frail-title {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  margin-left: 40px;
+  margin-left: 80px;
   width: fit-content;
 }
 
 .finish-line {
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 80px;
 }
 
 .album-cover a,
@@ -394,7 +395,7 @@ h2.frail-title {
     margin-top: 16px;
   }
 
-  .album-title{
+  h2.album-title {
     color: #ffffff;
     font-size: clamp(12px, 6vw, 12px);
   }
