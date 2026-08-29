@@ -478,10 +478,7 @@ h2.frail-title {
   }
 
   .hero-video{
-    position: static;
-    width: min(88vw, 360px);
-    margin: 20px auto 0;
-    transform: none;
+    display: none;
   }
 
   .top-nav{
