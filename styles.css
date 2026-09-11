@@ -267,9 +267,12 @@ h2.frail-title {
 .album-title {
   font-family: Serif, 'Times New Roman', Times, Georgia, serif;
   text-align: center;
+  width: 100%;
   margin-bottom: 16px;
+  line-height: 1.15;
   font-size: clamp(20px, 3vw, 18px);
   color: #ffffff;
+  overflow-wrap: break-word;
 }
 
 .hero-video {
@@ -304,7 +307,8 @@ h2.frail-title {
   align-items: center;
   margin-top: 20px;
   margin-left: var(--release-left);
-  width: fit-content;
+  width: 250px;
+  max-width: calc(100% - var(--release-left));
 }
 
 .finish-line {
