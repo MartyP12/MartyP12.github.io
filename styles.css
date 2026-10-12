@@ -251,8 +251,9 @@ nav a:hover {
 
 .upcoming-shows {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
+
   margin-bottom: 24px;
 }
 
@@ -331,8 +332,8 @@ h2.frail-title {
 }
 
 .shows {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-items: center;
   font-size: clamp(16px, 2.2vw, 27px);
   align-items: center;
   line-height: 2;
